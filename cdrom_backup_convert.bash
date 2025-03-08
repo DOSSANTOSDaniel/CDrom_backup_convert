@@ -646,7 +646,7 @@ opt_cddvd_backup() {
     --paranoia-mode 1 -v 2 "$Backup_dir"/image.toc
     if [[ "$?" -ne '0' ]]; then
       mesg_info 'w' "Erreur copie du CD et tentative de récupération via ddrescue !"
-      if ! sudo ddrescue -b 2048 -r3 -d -v "$cdrompath" "$Backup_dir"/"$cdrom_mountpoint".iso "$Backup_dir"/"$cdrom_mountpoint".log ; then
+      if ! ddrescue -b 2048 -r3 -d -v "$cdrompath" "$Backup_dir"/"$cdrom_mountpoint".iso "$Backup_dir"/"$cdrom_mountpoint".log ; then
         mesg_info 'w' "Impossible de récupérer le CD !"
         exit 1
       fi
@@ -684,7 +684,7 @@ opt_cddvd_backup() {
       mesg_info 'i' "💿 Début de la copie du DVD !"
       if ! dvdbackup --mirror --progress --input="$cdrompath" --output="$Backup_dir"; then
         mesg_info 'w' "Erreur copie du DVD et tentative de récupération via ddrescue !"
-        if ! sudo ddrescue -b 2048 -r3 -d -v "$cdrompath" "$Backup_dir"/"$cdrom_mountpoint".iso "$Backup_dir"/"$cdrom_mountpoint".log ; then
+        if ! ddrescue -b 2048 -r3 -d -v "$cdrompath" "$Backup_dir"/"$cdrom_mountpoint".iso "$Backup_dir"/"$cdrom_mountpoint".log ; then
           mesg_info 'w' "Impossible de récupérer le DVD !"
           exit 1
         fi
