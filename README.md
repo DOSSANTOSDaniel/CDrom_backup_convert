@@ -18,6 +18,7 @@ Il utilise `ffmpeg`, `HandBrakeCLI` et d'autres outils en fonction des options c
 ### [DVD_to_MKV]
 - **Récupération d'un DVD au format MKV** :
   Extrait le contenu d'un DVD et le convertit en un fichier MKV compatible avec la plupart des lecteurs multimédia.
+  Cela extrait aussi les vidéos bonus, tous les soustitres et toutes les pistes audios.
 
 ### [VCD_to_MKV]
 - **Récupération d'un VCD au format MKV** :
