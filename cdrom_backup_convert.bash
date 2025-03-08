@@ -126,7 +126,7 @@ dependencies() {
     "CD_DVD_Backup")
       if [[ "$pkg_manager" = 'dnf' ]]; then
         get_repos=""
-        get_apps='ddrescue cdrdao cdrtools genisoimage dvdbackup cdparanoia flac cuetools'
+        get_apps='ddrescue cdrdao genisoimage dvdbackup cdparanoia flac cuetools'
 
       elif [[ "$pkg_manager" = 'apt' ]]; then
         get_repos=''
