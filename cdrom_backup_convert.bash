@@ -233,7 +233,7 @@ detect_disk() {
           tab_menu+=("$cd_name,$cd_type,$cd_mountpoint,${drive_model:=Unknown}")
         else
           cd_type='cd'
-	        cd_mountpoint="$(basename "$cd_name")"
+	  cd_mountpoint="$(basename "$cd_name")"
           tab_menu+=("$cd_name,$cd_type,$cd_mountpoint,${drive_model:=Unknown}")
         fi
       else
@@ -275,6 +275,11 @@ detect_disk() {
 
     mesg_info 'i' " 💿 Disque sélectionné : $cdrom"
     read -rs -p "Appuyez sur Entrée pour continuer ! "
+  fi
+
+  if ! [[ -r "$cdrompath" ]]; then
+    sudo usermod -aG cdrom $USER
+    newgrp cdrom
   fi
 }
 
