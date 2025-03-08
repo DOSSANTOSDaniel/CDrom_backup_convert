@@ -1,24 +1,19 @@
 # CDrom_backup_convert
-## 📌 Description
-
-`cdrom_backup_convert.bash` est un script Bash permettant de convertir des fichiers **audio et vidéo** dans différents formats, ainsi que d'effectuer des sauvegardes de **CD/DVD/VCD**.
+Script Bash permettant de convertir des fichiers **audio et vidéo** dans différents formats, ainsi que d'effectuer des sauvegardes de **CD/DVD/VCD**.
 Il utilise `ffmpeg`, `HandBrakeCLI` et d'autres outils en fonction des options choisies.
 
----
-
 ## 🚀 Fonctionnalités
-
 ### [Convert]
 - **Conversion de fichiers audio** 🎵 :
-  Convertit des fichiers audio vers les formats populaires comme **MP3**, **FLAC**, et **AAC**.
+  Vers les formats populaires comme **MP3**, **FLAC**, et **AAC**.
 - **Conversion de fichiers vidéo** 🎬 :
-  Convertit des fichiers vidéo vers des formats courants tels que **MP4**, **MKV**, et **AVI**.
+  Vers des formats courants tels que **MP4**, **MKV**, et **AVI**.
 - **Support des dossiers** :
   Si un dossier est spécifié en entrée, tous les fichiers qu'il contient seront convertis.
 
 ### [KeepVF]
 - **Extraction et sauvegarde des pistes audio en français** 🇫🇷 :
-  L'objectif est de conserver uniquement la piste audio française ("stripping audio"), ce qui permet d'alléger le fichier.
+  L'objectif est de conserver uniquement la piste audio française ("stripping audio"), ce qui permet d'alléger le fichier vidéo.
 
 ### [DVD_to_MKV]
 - **Récupération d'un DVD au format MKV** :
